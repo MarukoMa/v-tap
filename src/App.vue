@@ -1,8 +1,7 @@
 <template>
   <div id="app">
     <h1>测试</h1>
-    <div v-tap-event="show"> tap测试</div>
-    <div v-tap-event:longpress="show2"> tap2测试</div>
+    <div v-tap-event="tapFun">绑定tap事件</div>
   </div>
 </template>
 
@@ -10,14 +9,18 @@
 
 export default {
   name: 'App',
+  data(){
+    return {
+    }
+  },
   components: {
   },
   methods:{
-      show(){
-          console.log('点击')
+      tapFun(){
+          console.log('绑定tap事件')
       },
-      show2(){
-        console.log('长按点击')
+      removeFun(){
+        console.log('移除tap事件')
       }
   }
 }
